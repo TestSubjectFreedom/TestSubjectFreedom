@@ -4,10 +4,14 @@ using UnrealBuildTool;
 
 public class TestSubjectFreedom : ModuleRules
 {
-	public TestSubjectFreedom(ReadOnlyTargetRules Target) : base(Target)
-	{
-		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+    public TestSubjectFreedom(ReadOnlyTargetRules Target) : base(Target)
+    {
+        PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput" });
-	}
+        PublicIncludePaths.AddRange(new string[] { "Voxel/Public" });
+        PrivateIncludePaths.AddRange(new string[] { "Voxel/Private" });
+
+        PublicDependencyModuleNames.AddRange(new string[]
+            { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput", "ProceduralMeshComponent", "Voxel" });
+    }
 }
