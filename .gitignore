@@ -30,6 +30,11 @@
 .vscode
 # VSCode History Files
 **/.history
+# VSCode Configuration Files
+.vsconfig
+# Editor Configuration Files
+.editorconfig
+shadertoolsconfig.json
 
 ###################################
 # JetBrains Rider Generated Files #
